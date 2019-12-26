@@ -1,0 +1,2 @@
+include ':app', ':exception_handeling_libs'
+rootProject.name='Handling Exception Java Practice'
