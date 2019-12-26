@@ -2,6 +2,7 @@ package org.richit.exception_handeling_libs;
 
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.ArrayList;
 
 public class MyClass {
     static String dot = "----------------";
@@ -60,12 +61,35 @@ public class MyClass {
 
     private static void someOtherException() {
         //todo: ArithmeticException which is coused by /0
-//        int value = 7;
-//        value = value/0;
-//        System.out.println(value);
+        int value = 7;
+        try {
+            value = value/0;
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
+        System.out.println(value);
+
         //todo: NullPointerException because of
         //string text has null value and has no length.
-//        String text = null;
-//        System.out.println(text.length());
+        String text = null;
+        try {
+            System.out.println(text.length());
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
+
+        //todo: ArrayindexoutofBoundaryException
+        //strings has 4 items, so it can't get more than get(3)
+
+        ArrayList<String> strings = new ArrayList<>(  );
+        strings.add( "Banana" );
+        strings.add( "Mango" );
+        strings.add( "Orange" );
+        strings.add( "Jackfruit" );
+        try {
+            System.out.println(strings.get( 6 ));
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
     }
 }
