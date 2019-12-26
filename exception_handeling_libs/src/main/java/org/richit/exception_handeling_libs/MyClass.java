@@ -27,6 +27,7 @@ public class MyClass {
         errorHandlingCommonTryCatch();
         errorHandlingNormalTryCatch();
         errorHandlingMultiTryCatch();
+        someOtherException();
 
         endProgramme();
     }
@@ -38,7 +39,6 @@ public class MyClass {
             System.out.println("Common: Eroor found in exception");
         }
     }
-
 
     public static void errorHandlingNormalTryCatch(){
         try {
@@ -56,5 +56,16 @@ public class MyClass {
         } catch (IOException | ParseException e) {
             System.out.println("Multi: Eroor found in exception");
         }
+    }
+
+    private static void someOtherException() {
+        //todo: ArithmeticException which is coused by /0
+//        int value = 7;
+//        value = value/0;
+//        System.out.println(value);
+        //todo: NullPointerException because of
+        //string text has null value and has no length.
+//        String text = null;
+//        System.out.println(text.length());
     }
 }
